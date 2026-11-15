@@ -1,1 +1,71 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nathan Hobbs</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter&family=Lexend:wght@100..900&family=Quicksand:wght@300;400;700&family=Staatliches&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    </head>
+    <body>
+        <script>
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').outerHTML = data;
+                    document.getElementById('aboutLink').classList.add('active');
+                });
+        </script>
+        <div id="nav-placeholder"></div>
+        <section class="py-5">
+            <div class="container py-lg-5">
+                <div class="row align-items-center g-5">
+                
+                    <!-- Left Column: Text & Call to Action -->
+                    <div id="nameCard" class="col-lg-7 text-center text-lg-start">
+                        <div class="d-grid">
+                            <div class="display-6">Hi, I'm</div>
+                            <div class="display-1 fw-bold ps-lg-4 text-nowrap">Nathan Hobbs</div>
+                        </div>
+                        <p class="lead text-body-secondary mb-4">
+                            Applied Math (BS) Student at NC State University,<br>Math and Data Science Enthusiast
+                        </p>
+                        <div class="d-flex gap-2 justify-content-center justify-content-lg-start">
+                            <a href="https://github.com/Nate0523" class="btn btn-outline-secondary rounded-circle p-0 overflow-hidden d-inline-flex align-items-center justify-content-center btn-circle">
+                                <img src="images/about/socials/github-white-icon.webp" alt="GitHub" class="object-fit-cover">
+                            </a>
+                            <a href="https://www.linkedin.com/in/nathan-hobbs2007/" class="btn btn-outline-secondary rounded-circle p-0 overflow-hidden d-inline-flex align-items-center justify-content-center btn-circle">
+                                <img src="images/about/socials/linkedinicon.png" alt="LinkedIn" class="object-fit-cover">
+                            </a>
+                            <a href="/contact.html" class="btn btn-outline-secondary rounded-circle p-0 overflow-hidden d-inline-flex align-items-center justify-content-center btn-circle">
+                                <span class="fw-bold">⋅⋅⋅</span>
+                            </a>
+                            <a href="/projects/projects.html" id="seeProjects" class="btn btn-outline-secondary rounded-pill overflow-hidden d-infline-flex align-content-center justify-content-center">See Projects ▸</a>
+                        </div>
+                    </div>
 
+                    <!-- Right Column: Headshot Photo -->
+                    <div class="col-lg-5 text-center text-lg-end">
+                        <img 
+                            src="images/about/nicephoto.jpg" 
+                            alt="Portrait of Nathan Hobbs" 
+                            class="img-fluid rounded-circle shadow-lg" 
+                            style="width: 320px; height: 320px; object-fit: cover;"
+                            width="320" 
+                            height="320" 
+                            fetchpriority="high"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    </body>
+</html>
