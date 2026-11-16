@@ -33,3 +33,9 @@
     width:30px;
     height:30px;
 }
+
+#accordion {
+    --bs-accordion-active-bg: #2f3438;      /* Subtle light gray when open (or use #ffffff for plain white) */
+    --bs-accordion-active-color: #fff;   /* Keeps title text dark instead of turning blue */
+    --bs-accordion-btn-focus-box-shadow: none; /* Removes the blue glow outline after clicking */
+}

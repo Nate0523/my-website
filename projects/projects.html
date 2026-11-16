@@ -21,7 +21,82 @@
                 });
         </script>
         <div id="nav-placeholder"></div>
+
+        <div class="d-grid justify-content-center m-2">
+            <span class="display-2 text-center">Professional Projects</span>
+            <span class="text-center m-2">Projects that pertain to my fields of interest (Portfolio)</span>
+            <div class="d-flex justify-content-between align-items-center">
+                
+                Also see...
+                <a href="/projects/desmos.html" class="btn btn-outline-secondary m-1" style="color:white;">Desmos Demos/Art</a>
+                <a href="/projects/misc.html" class="btn btn-outline-secondary m-1" style="color:white;">Nonprofessional Projects</a>
+            </div>
+        </div>
         
+        <div id="accordion" class="accordion p-2 px-sm-5">
+            
+            <!-- Project 1 -->
+            <div class="accordion-item mb-3 border rounded shadow-sm">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed rounded text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="me-3">
+                            <span class="fw-semibold me-2">Approximating the LWR traffic flow model using PINNs</span>
+                            <span class="badge bg-info">Data Science</span>
+                            <span class="badge bg-primary">Python, Neural Networks, Physical Modeling</span>
+                            <span class="badge bg-success">Ongoing</span>
+                            <span class="badge bg-secondary">Started: Oct. 2, 2026</span>
+                            <span class="badge bg-secondary">Last Update: Nov. 3</span>
+                        </div>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <h4>The Story:</h4>
+                        <h5>For physics-informed deep learning, I used the DeepXDE library with the JAX backend.</h5>
+                        I originally completed a proof-of-concept using PyTorch as the backend, but it was slow. I switched to JAX so that DeepXDE can take full advantage of CUDA and JAX's superior JIT compilation. <br>
+                        This came at a cost, however, as JAX was the least supported DeepXDE backend. <br>
+                        After training with Adam, I would finish off the model with L-BFGS. Here's the catch: <b><u>DeepXDE w/ JAX doesn't support L-BFGS optimization.</u></b> <br><br>
+                        <h5>Instead of admitting defeat and falling back to PyTorch, I wouldn't take no for an answer. </h5>
+                        I was going to manually implement a GPU-efficient training sequence for L-BFGS. <br>
+                        <b>This is the moment that transformed the project from a glorified homework assignment to advanced implementation.</b> <br> <br>
+                        <h5>I could no longer rely on DeepXDE's abstract "black box" methods and had to dip my toes in low-level ML engineering.</h5>
+                        As someone who's never worked with machine learning before, I had to figure out how to manually write optimization loops. It was an absolute nightmare but I learned an incredible amount from it. <br>
+                        I extracted the raw tensors out of my DeepXDE model, processed it through my own JAX/Optax pipeline, and injected it back into DeepXDE. <br>
+                        In the process, I had to figure out roughly how Optax solves and how to deal with L-BFGS being second-order, learn performance optimization with JIT compilation, and understand host-device synchronization. <br><br>
+
+                        <h3>Main takeaway:</h3>
+                        Coming in knowing <u>next to nothing</u> about neural networks, in less than a week I used my extensive math background and self-taught coding skills to learn:
+                        <ul>
+                            <li>Fundamentals of Neural Networks <ul>
+                                <li>Layer structure, activation functions, training/optimization processes, etc.</li>
+                                <li>The calculus behind backpropogation</li>
+                            </ul></li>
+                            <li>PINNs <ul>
+                                <li>PINN Training (collocation points & automatic differentiation, PDE residual loss, etc.)</li>
+                                <li>Using DeepXDE to approximate PDEs</li>
+                            </ul></li>
+                            <li>Future Applied Math Topics and Modeling <ul>
+                                <li>Traffic flow modeling using the LWR model (dealing with shocks, numerical stability, etc.)</li>
+                                <li>PDE solution methods</li>
+                                <li>Advanced data visualization with Matplotlib</li>
+                            </ul></li>
+                            <li>Low-Level ML Engineering <ul>
+                                <li>JAX and Optax <ul>
+                                    <li>Inner workings of how computers handle training/optimizing</li>
+                                    <li>GPU computing with JIT compilation</li>
+                                    <li>ML Library interoperability</li>
+                                </ul></li>
+                            </ul></li>
+                        </ul>
+                        After I'm done working on the presentation, this still needs polishing and has potential room for upgrades still. <br>
+                        This project comes from a semester project in my Math. Foundations of Data Sci. class. Our professor encouraged us to learn something outside the scope of the class and I thought it would be a good idea to merge ideas from my Methods of Applied Math. class by approximating the LWR model using neural networks. <br>
+                        Because this project originates from an assignment, I want to refrain from making the GitHub repo public until after it's graded to avoid accusations of academic dishonesty.
+                        <br><a href="#" class="btn btn-secondary disabled m-2">See it on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 
 

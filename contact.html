@@ -21,9 +21,14 @@
                 });
         </script>
         <div id="nav-placeholder"></div>
+
+        <div class="d-grid justify-content-center m-2">
+            <span class="display-2 text-center">Contact/Socials</span>
+            <span class="text-center m-2">Where to find/reach me</span>
+        </div>
         
         <div class="container d-flex flex-wrap justify-content-center gap-3">
-            <div class="card" style="width:300px">
+            <div class="card" style="width:250px">
                 <img src="/images/about/socials/email-icon.webp" alt="Email Icon" class="card-img-top p-5">
                 <div class="card-body text-center">
                     <h2 class="card-title">Email</h4>
@@ -41,7 +46,8 @@
                                 const link = document.createElement('a');
                                 link.href = `mailto:${one+two+three+four}`;
                                 link.textContent = one+two+three+four;
-                                link.className = "btn rounded-pill btn-secondary text-decoration-underline";
+                                link.className = "btn rounded-pill btn-outline-secondary text-decoration-underline";
+                                link.style = "color:white;"
 
                                 this.replaceWith(link);
                             });
@@ -49,18 +55,18 @@
                     </script>
                 </div>
             </div>
-            <div class="card" style="width:300px">
+            <div class="card" style="width:250px">
                 <img src="/images/about/socials/github-white-icon.webp" alt="GitHub Logo" class="card-img-top p-5">
                 <div class="card-body text-center">
                     <h2 class="card-title">GitHub</h4>
-                    <a href="https://github.com/Nate0523" class="btn rounded-pill btn-secondary text-decoration-underline">Nate0523</a>
+                    <a href="https://github.com/Nate0523" class="btn rounded-pill btn-outline-secondary text-decoration-underline" style="color:white;">Nate0523</a>
                 </div>
             </div>
-            <div class="card" style="width:300px">
+            <div class="card" style="width:250px">
                 <img src="/images/about/socials/linkedinicon.png" alt="LinkedIn Logo" class="card-img-top p-5">
                 <div class="card-body text-center">
                     <h2 class="card-title">LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/nathan-hobbs2007/" class="btn rounded-pill btn-secondary text-decoration-underline">Nathan Hobbs</a>
+                    <a href="https://www.linkedin.com/in/nathan-hobbs2007/" class="btn rounded-pill btn-outline-secondary text-decoration-underline" style="color:white;">Nathan Hobbs</a>
                 </div>
             </div>
         </div>
